@@ -1,7 +1,8 @@
 import re
 
 # insert the path to your work directory
-
-w_dir = ''
-for i in os.listdir(w_dir):
-    print(re.sub(r'\d+', '', i.split('.')[0]))
+w_dir = 'C:/textf'
+def rename_files(w_dir):
+    files_list = os.listdir(w_dir)
+    for file_name in files_list:
+        os.rename(w_dir + file_name, re.sub(r'\d+', '', w_dir + file_name))
