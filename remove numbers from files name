@@ -1,0 +1,7 @@
+import re
+
+# insert the path to your work directory
+
+w_dir = ''
+for i in os.listdir(w_dir):
+    print(re.sub(r'\d+', '', i.split('.')[0]))
